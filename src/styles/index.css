@@ -4,6 +4,10 @@
 
 body {
     background-color: rgb(1, 1, 1);
+    background-image: url("../images/bg.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 
 h1,h2,h3,p {
@@ -16,7 +20,7 @@ h1,h2,h3 {
 }
 
 h1 {
-    font-size: 50px;
+    font-size: 80px;
 }
 
 h2 {
@@ -28,10 +32,54 @@ p {
     font-family: 'Space Mono', monospace;
 }
 
-.container {
-    display: flex;
-    flex-direction: row;
-    justify-content: center
-;
+a:link,
+a:visited {
+    color: white;
 }
 
+a:hover {
+    color: aqua;
+    text-decoration: none;
+}
+
+
+main, section, footer {
+    border: 1px solid white;
+    width: 90%;
+    margin: 0 auto;
+}
+
+section.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+section.container figure{
+    margin: 0;
+    padding: 0;
+    margin-right: 15px;
+}
+
+section.container div{
+    width: 33%;
+}
+section.container figure img{
+    width: 100%;
+    transition: transform 1.1s ease-in-out;
+}
+
+section.container figure img:hover {
+    transform: scale(1.3);
+    filter:drop-shadow(10px 10px 30px white);
+
+}
+
+section.container figure summary {
+    cursor: pointer;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+}
+ 
